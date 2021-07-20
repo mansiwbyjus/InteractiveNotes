@@ -1,0 +1,35 @@
+#parent-div{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: aliceblue;
+}
+
+.centerParent{
+    height: 30vh !important;
+    width: 30vh!important;
+    position:absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:aqua !important;
+ 
+  }
+
+  .centerImg{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    
+    }
+
+ 
+  .textDiv{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    background-color: blue;
+    opacity: 40%;
+    }
