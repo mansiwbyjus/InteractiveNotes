@@ -1,6 +1,16 @@
+body{
+  background-color: aliceblue;
+  width: 177vh;
+  height: 100vh;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 #parent-div{
     position: absolute;
-    width: 100vw;
+    width: 177vh;
     height: 100vh;
     background-color: aliceblue;
 }
@@ -9,10 +19,7 @@
     height: 30vh !important;
     width: 30vh!important;
     position:absolute !important;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color:aqua !important;
+    background-color:transparent !important;
  
   }
 
@@ -30,6 +37,22 @@
     width: 100%;
     position: absolute;
     z-index: 1;
-    background-color: blue;
+    background-color: transparent;
     opacity: 40%;
+    text-align: center;
+   
     }
+
+  .sideDiv{
+    /* height: 20vh;
+    width: 20vh; */
+    position: absolute;
+    background-color: transparent;
+  }
+
+  .grandchildDiv{
+    /* height: 20vh;
+    width: 20vh; */
+    position: absolute;
+    background-color: transparent;
+  }
