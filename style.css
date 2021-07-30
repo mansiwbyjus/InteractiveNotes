@@ -1,5 +1,4 @@
 body{
-  background-color: aliceblue;
   width: 177vh;
   height: 100vh;
   margin: 0;
@@ -7,13 +6,20 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  /* background: radial-gradient(119.99% 62.42% at 50% 36.33%, #7B16E1 0%, #000E87 100%); */
+  background-color: aliceblue;
+    
 }
+
+
 #parent-div{
     position: absolute;
     width: 177vh;
     height: 100vh;
-    background-color: aliceblue;
-}
+    background-image: radial-gradient(119.99% 62.42% at 50% 36.33%, #7B16E1 0%, #000E87 100%);
+      /* background: radial-gradient(119.99% 62.42% at 50% 36.33%, #7B16E1 0%, #000E87 100%); */
+  
+  }
 
 .centerParent{
     height: 30vh !important;
@@ -28,19 +34,23 @@ body{
     width: 100%;
     position: absolute;
     z-index: 1;
-    
     }
 
  
   .textDiv{
-    height: 100%;
-    width: 100%;
+    height: 50%;
+    width: 50%;
     position: absolute;
     z-index: 1;
-    background-color: transparent;
     opacity: 40%;
     text-align: center;
-   
+    font-size: 2vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(#CF47FF, #7E00EE);
+    /* background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
     }
 
   .sideDiv{
