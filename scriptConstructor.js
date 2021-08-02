@@ -124,7 +124,6 @@ for (let i = 0; i < sides; i++) {
                 else{
                     for (k = 0; k < grandchildDiv[i].length; k++) {
                         grandchildDiv[this.index[1]][k].style.display = 'block';
-                        //grandchildDiv[this.index[1]][k].remove(divElement);
                     }
                 }
                 
@@ -140,10 +139,11 @@ for (let i = 0; i < sides; i++) {
             for (k = 0; k < noOfGrandChild; k++) {
                 grandchildDiv[this.index[1]][k].onclick = function () {
                     console.log("i=",this.index[1]);
-                    w = -(parseFloat(grandchildDiv[this.index[1]][this.index[2]].centerX) - sideDiv[this.index[1]].centerX) + 'vh';
-                    z = -(parseFloat(grandchildDiv[this.index[1]][this.index[2]].centerY) - sideDiv[this.index[1]].centerY) + 'vh';
+                    w = -(parseFloat(grandchildDiv[this.index[1]][this.index[2]].centerX) - sideDiv[this.index[1]].centerX ) + 'vh';
+                    z = -(parseFloat(grandchildDiv[this.index[1]][this.index[2]].centerY) - sideDiv[this.index[1]].centerY ) + 'vh';
                     if (gClicked == 0) {
-                        this.style.fontSize = '2vh';
+                        //this.style.fontSize = '2vh';
+                        grandchildDiv[this.index[1]][this.index[2]].childNodes[1].style.fontSize='1vh';
                         parentDiv.style.transform = 'translate(' + w.toString() + ',' + z.toString() + ')';
                         parentDiv.style.transition = "transform 0.70s ease-in-out";
                         this.style.transform = "scale(3)";
@@ -151,12 +151,13 @@ for (let i = 0; i < sides; i++) {
                         // SetTextDiv(grandchildDiv[k],grandchildTextMatrix[i][k]);
                        // console.log("grandChildIndex",grandchildDiv[i][k]);
                         //console.log(grandchildDiv[this.index[1]][this.index[2]].childNodes[1]);
-                        grandchildDiv[this.index[1]][this.index[2]].childNodes[1].innerHTML=grandchildTextMatrix[this.index[1]][this.index[2]];
+                        grandchildDiv[this.index[1]][this.index[2]].childNodes[1].innerHTML=grandchildTextMatrix[this.index[1]][this.index[2]];  //childNode[1] = TextDiv of grandchildDiv
                         gClicked = 1;
                     }
                     else {
                         grandchildDiv[this.index[1]][this.index[2]].childNodes[1].innerHTML=grandchildHeading[this.index[1]][this.index[2]];
-                        this.style.fontSize = '1.5vh';
+                        grandchildDiv[this.index[1]][this.index[2]].childNodes[1].style.fontSize='2vh';
+
                         this.style.transform = 'scale(1)';
                         this.style.transition = "transform 0.70s ease-in-out";
                         parentDiv.style.transform = 'translate(0,0)';
